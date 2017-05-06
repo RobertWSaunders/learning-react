@@ -13,6 +13,5 @@ Plan of Course:
 
 ## Notes
 
-- Our porject files need tooling to transpile our code, we use Webpack and Babel to do this.
-- NPM (node package manager)
--
+- Our project files need tooling to transpile our code, we use Webpack and Babel to do this.
+- NPM (node package manager), used to load in some dependancies.
