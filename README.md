@@ -20,3 +20,13 @@ Plan of Course:
 - Traditional React applications have distributed components.
 - Want to decide how to break up application into components.
 - Always one component per file.
+- package.json is a list of all of the dependancies our project has.
+- Components that are not classes are called functional components.
+- Another type of component is called a class component.
+- Every class based component needs a render method.
+- State is one of the hardest topics to understand in React.
+- State is plain JS object to record and react to user events.
+- Each component has a state, when it changes the component re-renders.
+- A controlled input element the value defined by the state.
+- Downwards data flow, only the most parent component should be responsible for fetching data.
+- Props are a good example of downward data flow.
