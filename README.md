@@ -30,3 +30,4 @@ Plan of Course:
 - A controlled input element the value defined by the state.
 - Downwards data flow, only the most parent component should be responsible for fetching data.
 - Props are a good example of downward data flow.
+- Always good to set a key for an item when rendering a list of data, so React can update without re-rendering entire list.
