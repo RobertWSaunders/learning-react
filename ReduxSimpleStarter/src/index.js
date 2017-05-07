@@ -1,54 +1,15 @@
-//go find the library called react and assign it to the variable React
-import _ from 'lodash';
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import YouTubeSearch from 'youtube-api-search';
-//have to give relative path
-import SearchBar from './components/search_bar';
-import VideoList from './components/video_list';
-import VideoDetail from './components/video_detail';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-const API_KEY = 'AIzaSyCwXiydBV6h8Glf-Bfn_ou1EveOo9-FPFc';
+import App from './components/app';
+import reducers from './reducers';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      videos: [],
-      selectedVideo: null,
-    };
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-    this.videoSearch('surfboards');
-  }
-
-  videoSearch(term) {
-    YouTubeSearch({key: API_KEY, term}, videos => {
-      this.setState({
-        videos: videos,
-        selectedVideo: videos[0]
-      });
-    });
-  }
-
-
-  render() {
-    const videoSearch = _.debounce(term => {
-      this.videoSearch(term)
-    }, 300);
-
-    return (
-      <div>
-        <SearchBar onSearchTermChange={videoSearch} />
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList
-          onVideoSelect={selectedVideo => this.setState({selectedVideo})}
-          videos={this.state.videos} />
-      </div>
-    );
-  }
-}
-
-// take the generated HTML and put it on the page
-//have to instantiate App before passing it into the DOM
-//wrapping it in JSX tags will make it into an instance
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>
+  , document.querySelector('.container'));

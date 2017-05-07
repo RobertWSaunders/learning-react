@@ -11,7 +11,7 @@ Plan of Course:
 - Learn General Data Modeling
 - Dive into Redux
 
-## Notes
+## React Notes
 
 - Our project files need tooling to transpile our code, we use Webpack and Babel to do this.
 - NPM (node package manager), used to load in some dependancies.
@@ -31,3 +31,9 @@ Plan of Course:
 - Downwards data flow, only the most parent component should be responsible for fetching data.
 - Props are a good example of downward data flow.
 - Always good to set a key for an item when rendering a list of data, so React can update without re-rendering entire list.
+
+## Redux Notes
+- Redux is more related to the data contained in the application.
+- A collection of all of the data that describes the app.
+- Redeux is application level state, React is component level state.
+- It's critical to be good at modeling the state of your app.
