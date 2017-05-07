@@ -15,3 +15,8 @@ Plan of Course:
 
 - Our project files need tooling to transpile our code, we use Webpack and Babel to do this.
 - NPM (node package manager), used to load in some dependancies.
+- Components are snippets of code that produce HTML.
+- Writing React involves writing lots of components and using them together to create complex applications.
+- Traditional React applications have distributed components.
+- Want to decide how to break up application into components.
+- Always one component per file.
