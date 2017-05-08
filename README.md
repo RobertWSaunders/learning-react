@@ -42,3 +42,5 @@ Plan of Course:
 - A container is a React component that has a direct relation to the state manager by Redux.
 - We want components that care about state to be components.
 - Only the most parent component that needs state is needed, children can leverage that.
+- Action creators return an object, has a type that describes the action that occured.
+- Actions are automatically sent to all reducers in application.
