@@ -1,4 +1,4 @@
-Learning React Course Notes
+Learning React and Redux Course Notes
 ===========================
 
 ## Overview
@@ -37,3 +37,8 @@ Plan of Course:
 - A collection of all of the data that describes the app.
 - Redeux is application level state, React is component level state.
 - It's critical to be good at modeling the state of your app.
+- Reducers is a function that returns a piece of the applications state.
+- Reducers produce the value of our state.
+- A container is a React component that has a direct relation to the state manager by Redux.
+- We want components that care about state to be components.
+- Only the most parent component that needs state is needed, children can leverage that.
